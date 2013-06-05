@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+YOU ARE SIGNED IN AS: <%= current_user.email %>, ID: <%= current_user.id %> - 
+<% else %>
+YOU ARE NOT SIGNED IN AS A USER - 
+<% end %>
+<br>
+<% if temp_signed_in? %>
+YOU ARE SIGNED IN AS: <%= current_temp.email %> - ID: <%= current_temp.id %> - ROLE: <%= current_temp.type %> - 
+	<% if current_temp.type == "Temp::Subject" %>
+	MANAGER: <%= current_temp.user.email %> - 
+	<% else %>
+	TESTING FOR: <%= current_temp.subject.email %> - MANAGER: <%= current_temp.subject.user.email %> - 
+	<% end %>
+<% else %>
+YOU ARE NOT SIGNED IN AS A TEMP - 
+<% end %>
+

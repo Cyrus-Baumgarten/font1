@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rev1</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'devise/menu/user_registration_items' %>
+	<%= render 'devise/menu/user_login_items' %>
+	<%= render 'devise/menu/temp_login_items' %>
+	
+	<br>
+	<br>
+	<%= render 'devise/menu/temp_login' %>
+	<br>
+	<br>
+	<%= render 'devise/menu/status' %>
+	
+	
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
+	<%= yield %>
+
+</body>
+</html>

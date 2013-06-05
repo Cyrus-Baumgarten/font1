@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+<%= link_to(' - USER : Edit registration - ', edit_user_registration_path) %>
+<% else %>
+<%= link_to(' - USER : Register - ', new_user_registration_path)  %>
+<% end %>
