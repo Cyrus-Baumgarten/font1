@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
   
   has_many :temps
   #@user is valid and responds to .temps, @subject.user is successful
+  has_many :sketches
+  
 end
