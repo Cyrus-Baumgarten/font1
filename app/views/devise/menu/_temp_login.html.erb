@@ -1,5 +1,5 @@
 <%= form_for("temp", :url => temp_session_path) do |f| %>
-	<%= f.password_field :password, placeholder: "RECIVE A CODE?"%>
+	<%= f.text_field :password, placeholder: "RECIVE A CODE?"%>
   <%= f.text_field :email, placeholder: "EMAIL" %>
   <%= f.submit 'GET STARTED' %>
 <% end %>
