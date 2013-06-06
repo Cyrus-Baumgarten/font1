@@ -11,11 +11,13 @@ class Temp < ActiveRecord::Base
     belongs_to :user
     has_many :testers
     #@subject is valid and responds to .user and .testers, association of user successful, association of tester successful.
+    has_one :sketch
   end
   
   class Tester < Temp
     belongs_to :subject
     #@tester is valid, responds to .subject, assocation with subject successful, able to pull from 2 levels up with @tester.subject.user.attribute
+    belongs_to :external
   end
   
 end
