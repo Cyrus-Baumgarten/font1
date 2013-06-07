@@ -14,8 +14,7 @@ class DeviseCreateTemps < ActiveRecord::Migration
 
       t.timestamps
       t.string :type
-      t.integer :user_id
-      t.integer :subject_id
+      t.string :code
     end
 
     add_index :temps, :email,                :unique => true

@@ -6,18 +6,15 @@ class Temp < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :code
   
   class Subject < Temp
-    belongs_to :user
-    has_many :testers
-    #@subject is valid and responds to .user and .testers, association of user successful, association of tester successful.
     has_one :sketch
   end
   
   class Tester < Temp
-    belongs_to :subject
-    #@tester is valid, responds to .subject, assocation with subject successful, able to pull from 2 levels up with @tester.subject.user.attribute
-    belongs_to :external
+    has_one :external
+    has_one :internal
   end
   
 end

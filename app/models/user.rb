@@ -7,8 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
-  has_many :temps
-  #@user is valid and responds to .temps, @subject.user is successful
+  
   has_many :sketches
   
 end

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sketch_id: 1
+  temp_id: 1
+  a1size: 1
+  a2size: 1
+  a3size: 1
+  a4size: 1
+  a5size: 1
+  a6size: 1
+  a7size: 1
+  a8size: 1
+  a9size: 1
+
+two:
+  sketch_id: 1
+  temp_id: 1
+  a1size: 1
+  a2size: 1
+  a3size: 1
+  a4size: 1
+  a5size: 1
+  a6size: 1
+  a7size: 1
+  a8size: 1
+  a9size: 1
