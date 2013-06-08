@@ -1,5 +1,6 @@
 Rev1::Application.routes.draw do
 
+  get "static_pages/landing"
   devise_for :temps
   devise_for :users
   
@@ -10,8 +11,8 @@ Rev1::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
-  get 'static_pages/home'
-  
+  match '/landing' => 'static_pages#landing', via: :get
+    
   root 'static_pages#home'
 
   # Example of regular route:
