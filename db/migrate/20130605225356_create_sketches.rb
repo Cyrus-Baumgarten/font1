@@ -5,6 +5,7 @@ class CreateSketches < ActiveRecord::Migration
       t.string :recipiant
       t.string :email
       t.integer :user_id
+      t.integer :temp_id
       t.integer :subject_id
       t.string :a1
       t.string :a2

@@ -3,6 +3,8 @@ Rev1::Application.routes.draw do
   devise_for :temps
   devise_for :users
   
+  resources :sketches
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

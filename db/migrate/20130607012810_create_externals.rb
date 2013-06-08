@@ -2,6 +2,7 @@ class CreateExternals < ActiveRecord::Migration
   def change
     create_table :externals do |t|
       t.integer :sketch_id
+      t.integer :temp_id
       t.integer :tester_id
       
       t.string :name

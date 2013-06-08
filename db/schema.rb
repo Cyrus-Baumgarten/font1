@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20130607013814) do
 
   create_table "externals", force: true do |t|
     t.integer  "sketch_id"
+    t.integer  "temp_id"
     t.integer  "tester_id"
     t.string   "name"
     t.string   "email"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20130607013814) do
 
   create_table "internals", force: true do |t|
     t.integer  "sketch_id"
+    t.integer  "temp_id"
     t.integer  "tester_id"
     t.string   "name"
     t.string   "email"
@@ -58,6 +60,7 @@ ActiveRecord::Schema.define(version: 20130607013814) do
     t.string   "recipiant"
     t.string   "email"
     t.integer  "user_id"
+    t.integer  "temp_id"
     t.integer  "subject_id"
     t.string   "a1"
     t.string   "a2"

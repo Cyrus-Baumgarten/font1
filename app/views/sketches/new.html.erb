@@ -1,0 +1,30 @@
+<%= form_for @sketch do |f| %>
+
+<%= f.label :manager, "Your Name" %>
+<%= f.text_field :manager %>
+<br>
+<%= f.label :recipiant %>
+<%= f.text_field :recipiant %>
+<br>
+<%= f.label :email, "Recipiants Email" %>
+<%= f.text_field :email %>
+<br>
+Your Attributes
+<br>
+<%= f.text_field :a1 %><br>
+<%= f.text_field :a2 %><br>
+<%= f.text_field :a3 %><br>
+<%= f.text_field :a4 %><br>
+<%= f.text_field :a5 %><br>
+<%= f.text_field :a6 %><br>
+<%= f.text_field :a7 %><br>
+<%= f.text_field :a8 %><br>
+<%= f.text_field :a9 %><br>
+
+<%= f.submit "Create Sketch and send request" %>
+
+<% end %>
+
+
+<h1>Sketches#new</h1>
+<p>Find me in app/views/sketches/new.html.erb</p>

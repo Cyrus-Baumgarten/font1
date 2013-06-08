@@ -7,7 +7,7 @@ YOU ARE NOT SIGNED IN AS A USER -
 <% if temp_signed_in? %>
 YOU ARE SIGNED IN AS: <%= current_temp.email %> - ID: <%= current_temp.id %> - ROLE: <%= current_temp.type %> - 
 	<% if current_temp.type == "Temp::Subject" %>
-	MANAGER: <%= current_temp.user.email %> - 
+	MANAGER: <%= current_temp.sketch.user.email %> - 
 	<% else %>
 	TESTING FOR: <%= current_temp.subject.email %> - MANAGER: <%= current_temp.subject.user.email %> - 
 	<% end %>
