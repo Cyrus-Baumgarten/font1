@@ -1,1 +1,7 @@
 <%= link_to " - CREATE SKETCH - " , new_sketch_path %>
+<br>
+<% if user_signed_in? || temp_signed_in? %>
+<%= link_to ' - LANDING - ', landing_path %> <%= link_to " - DASHBOARD - ", root_path %>
+<% else %>
+<%= link_to ' - HOME - ', landing_path %>
+<% end %>

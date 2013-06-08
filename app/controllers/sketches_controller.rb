@@ -36,6 +36,7 @@ class SketchesController < ApplicationController
   end
 
   def index
+    @sketches = current_user.sketches.to_a
   end
 
   def destroy

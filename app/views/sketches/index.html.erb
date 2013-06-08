@@ -1,2 +1,13 @@
+<h1>VIEWING ALL SKETCHES</h1>
+
+<ul>
+<% @sketches.each do |sketch| %>
+<li>
+	<%= link_to sketch.recipiant, sketch %>
+</li>
+<% end %>
+</ul>
+
+
 <h1>Sketches#index</h1>
 <p>Find me in app/views/sketches/index.html.erb</p>
