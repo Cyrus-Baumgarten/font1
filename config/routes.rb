@@ -1,16 +1,29 @@
 Rev1::Application.routes.draw do
 
-  get "static_pages/landing"
+  get "bundles/make"
+  get "temps/show"
+  get "temps/index"
+  get "externals/show"
+  get "externals/index"
+  get "externals/new"
+  get "externals/create"
+  get "externals/edit"
+  get "externals/update"
+  get "externals/destroy"  
+  
+  
   devise_for :temps
   devise_for :users
   
+  resources :temps
   resources :sketches
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  
+
+  match '/bundle' => 'bundles#make', via: :post
   match '/landing' => 'static_pages#landing', via: :get
     
   root 'static_pages#home'

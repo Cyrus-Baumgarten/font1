@@ -33,6 +33,8 @@ class SketchesController < ApplicationController
   def show
     @sketch = Sketch.find(params[:id])
     @subject = @sketch.temp
+    @externals = @sketch.externals.all
+    @internals = @sketch.internals.all
   end
 
   def index

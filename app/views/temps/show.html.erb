@@ -1,0 +1,72 @@
+<% if current_temp.type == Temp::Subject %>
+	<% if current_temp.sketch.internals.count == 0 %>
+	<h1>YOU HAVE A PENDING SKETCH</h1>
+	<%= form_for(:bundle, url: bundle_path) do |f| %>
+		<h3>Choose 5 Superiors</h3>
+		<%= f.text_field :name1, placeholder: "Full Name..." %>
+		<%= f.text_field :mail1, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name2, placeholder: "Full Name..." %>
+		<%= f.text_field :mail2, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name3, placeholder: "Full Name..." %>
+		<%= f.text_field :mail3, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name4, placeholder: "Full Name..." %>
+		<%= f.text_field :mail4, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name5, placeholder: "Full Name..." %>
+		<%= f.text_field :mail5, placeholder: "Email..." %>
+		<br>
+		<h3>Choose 5 Peers</h3>
+		<%= f.text_field :name6, placeholder: "Full Name..." %>
+		<%= f.text_field :mail6, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name7, placeholder: "Full Name..." %>
+		<%= f.text_field :mail7, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name8, placeholder: "Full Name..." %>
+		<%= f.text_field :mail8, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name9, placeholder: "Full Name..." %>
+		<%= f.text_field :mail9, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name10, placeholder: "Full Name..." %>
+		<%= f.text_field :mail10, placeholder: "Email..." %>
+		<br>
+		<h3>Choose 5 Subordinates</h3>
+		<%= f.text_field :name11, placeholder: "Full Name..." %>
+		<%= f.text_field :mail11, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name12, placeholder: "Full Name..." %>
+		<%= f.text_field :mail12, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name13, placeholder: "Full Name..." %>
+		<%= f.text_field :mail13, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name14, placeholder: "Full Name..." %>
+		<%= f.text_field :mail14, placeholder: "Email..." %>
+		<br>
+		<%= f.text_field :name15, placeholder: "Full Name..." %>
+		<%= f.text_field :mail15, placeholder: "Email..." %>
+		<br>
+		<br>
+		<%= f.submit "Send our your sketch" %>
+		<% end %>
+	
+	<% else %>
+	
+		<h3>You have pendinding Self-Tests</h3>
+	
+		<ul>
+		<% current_temp.sketch.internals.to_a.each do |internal| %>
+		<li>
+		<%= internal.number %>, <%= internal.relationship %>, <%= internal.name %>, <%= internal.email %>
+		</li>
+		<% end %>
+		</ul>
+
+	<% end %>
+<% end %>
+<h1>Temps#show</h1>
+<p>Find me in app/views/temps/show.html.erb</p>

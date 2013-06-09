@@ -6,6 +6,8 @@ Sketch Recipiant: <b><%= @sketch.recipiant %></b>
 <br>
 Recipiant Email: <b><%= @sketch.email %></b>
 <br>
+Login Code: <b><%= @subject.code %></b>
+<br>
 
 <br>
 <b>Your Attributes:</b>
@@ -14,20 +16,44 @@ Recipiant Email: <b><%= @sketch.email %></b>
 <br>
 
 <br>
-<b>This sketches Users:</b>
+<b>Self-Tests</b>
+<br>
+
+<ul>
+<% @internals.each do |internal| %>
+<li>
+	<%= internal.name %>, <%= internal.relationship %>, 
+	Status: <% if internal.a1size.nil? %>
+	Not Taken
+	<% else %>
+	Pending
+	<% end %>
+	<br>
+	<br>
+</li>
+<% end %>
+</ul>
 <br>
 
 <br>
-<b>Recipiant:</b>
-<br>
-<%= @sketch.recipiant %>
-<br>
-<%= @subject.email %>
-<br>
-Login Code: <%= @subject.code %>
+<b>External Tests</b>
+<ul>
+	<% @externals.each do |external| %>
+	<li>
+		<%= external.name %>, <%= external.relationship %><br>
+		Login: <%= external.email %> | <%= external.temp.code %><br>
+		Status: <% if external.a1size.nil? %>
+		Not Taken
+		<% else %>
+		Pending
+		<% end %>
+		| <%= link_to "View", "#" %> | <%= link_to "Remind", "#" %> | <%= link_to "Edit Email", "#" %>
+	</li>
+	<br>
+	<% end %>
+</ul>
 <br>
 
-<br>
 <%= link_to 'Back to all sketches', sketches_path %>
 <h1>Sketches#show</h1>
 <p>Find me in app/views/sketches/show.html.erb</p>

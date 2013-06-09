@@ -9,7 +9,7 @@ YOU ARE SIGNED IN AS: <%= current_temp.email %> - ID: <%= current_temp.id %> - R
 	<% if current_temp.type == "Temp::Subject" %>
 	MANAGER: <%= current_temp.sketch.user.email %> - 
 	<% else %>
-	TESTING FOR: <%= current_temp.subject.email %> - MANAGER: <%= current_temp.subject.user.email %> - 
+	TESTING FOR: <%= current_temp.external.sketch.temp.email %> - MANAGER: <%= current_temp.external.sketch.user.email %> - 
 	<% end %>
 <% else %>
 YOU ARE NOT SIGNED IN AS A TEMP - 
