@@ -22,12 +22,13 @@ Login Code: <b><%= @subject.code %></b>
 <ul>
 <% @internals.each do |internal| %>
 <li>
-	<%= internal.name %>, <%= internal.relationship %>, 
+	<%= internal.name %> | <%= internal.relationship %> | 
 	Status: <% if internal.a1size.nil? %>
 	Not Taken
 	<% else %>
 	Pending
 	<% end %>
+	| <%= link_to "View", internal_path(internal)%>
 	<br>
 	<br>
 </li>
@@ -47,7 +48,7 @@ Login Code: <b><%= @subject.code %></b>
 		<% else %>
 		Pending
 		<% end %>
-		| <%= link_to "View", "#" %> | <%= link_to "Remind", "#" %> | <%= link_to "Edit Email", "#" %>
+		| <%= link_to "View", external_path(external) %> | <%= link_to "Remind", "#" %> | <%= link_to "Edit Email", edit_external_path(external) %>
 	</li>
 	<br>
 	<% end %>

@@ -1,5 +1,10 @@
 Rev1::Application.routes.draw do
 
+  get "internals/show"
+  get "internals/index"
+  get "internals/edit"
+  get "internals/update"
+  get "internals/destroy"
   get "bundles/make"
   get "temps/show"
   get "temps/index"
@@ -17,6 +22,8 @@ Rev1::Application.routes.draw do
   
   resources :temps
   resources :sketches
+  resources :externals
+  resources :internals
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -13,6 +13,7 @@ class ExternalsController < ApplicationController
   end
 
   def edit
+    @external = External.find(params[:id])
   end
 
   def update

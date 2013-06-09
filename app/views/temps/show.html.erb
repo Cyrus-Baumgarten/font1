@@ -1,4 +1,4 @@
-<% if current_temp.type == Temp::Subject %>
+<% if current_temp.type == "Temp::Subject" %>
 	<% if current_temp.sketch.internals.count == 0 %>
 	<h1>YOU HAVE A PENDING SKETCH</h1>
 	<%= form_for(:bundle, url: bundle_path) do |f| %>
@@ -61,7 +61,10 @@
 		<ul>
 		<% current_temp.sketch.internals.to_a.each do |internal| %>
 		<li>
-		<%= internal.number %>, <%= internal.relationship %>, <%= internal.name %>, <%= internal.email %>
+		<%= internal.number %> | <%= internal.relationship %> | <%= internal.name %> | <%= internal.email %> | <%= link_to "Take Test", edit_internal_path(internal)%>
+		<% if internal.a1size != nil %>
+		 | <%= link_to "View", internal_path(internal) %>
+		<% end %>
 		</li>
 		<% end %>
 		</ul>
