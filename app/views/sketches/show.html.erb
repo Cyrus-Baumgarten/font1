@@ -28,7 +28,9 @@ Login Code: <b><%= @subject.code %></b>
 	<% else %>
 	Pending
 	<% end %>
-	| <%= link_to "View", internal_path(internal)%>
+	<% if internal.a1size != nil %>
+	 | <%= link_to "View", internal_path(internal) %>
+	<% end %>
 	<br>
 	<br>
 </li>
@@ -41,14 +43,18 @@ Login Code: <b><%= @subject.code %></b>
 <ul>
 	<% @externals.each do |external| %>
 	<li>
-		<%= external.name %>, <%= external.relationship %><br>
+		<%= external.name %> | <%= external.relationship %><br>
 		Login: <%= external.email %> | <%= external.temp.code %><br>
 		Status: <% if external.a1size.nil? %>
 		Not Taken
 		<% else %>
 		Pending
 		<% end %>
-		| <%= link_to "View", external_path(external) %> | <%= link_to "Remind", "#" %> | <%= link_to "Edit Email", edit_external_path(external) %>
+		<% if external.a1size != nil %>
+		 | <%= link_to "View", internal_path(external) %>
+		<% end %>
+		<br>
+		<%= link_to "Remind", "#" %> | <%= link_to "Edit Email", edit_external_path(external) %>
 	</li>
 	<br>
 	<% end %>

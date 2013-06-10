@@ -1,2 +1,57 @@
+<%= form_for @external do |f| %>
+
+<table>
+	<tr>
+		<td><h3><%= @sketch.a1 %></h3></td>
+		<td><%= f.range_field :a1size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a2 %></h3></td>
+		<td><%= f.range_field :a2size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a3 %></h3></td>
+		<td><%= f.range_field :a3size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a4 %></h3></td>
+		<td><%= f.range_field :a4size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a5 %></h3></td>
+		<td><%= f.range_field :a5size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a6 %></h3></td>
+		<td><%= f.range_field :a6size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a7 %></h3></td>
+		<td><%= f.range_field :a7size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a8 %></h3></td>
+		<td><%= f.range_field :a8size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	<tr>
+		<td><h3><%= @sketch.a9 %></h3></td>
+		<td><%= f.range_field :a9size, in: 1..10, step: 1 %></td>
+	</tr>
+	
+	
+</table>
+
+<%= f.submit "Submit Test"%>
+<% end %>
+
+
 <h1>Externals#edit</h1>
 <p>Find me in app/views/externals/edit.html.erb</p>

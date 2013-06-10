@@ -68,8 +68,18 @@
 		</li>
 		<% end %>
 		</ul>
-
 	<% end %>
+	
+<% elsif current_temp.type == "Temp::Tester" %>
+	
+	<h1>Your Test:</h1>
+	
+	<%= current_temp.external.sketch.recipiant %> | <%= current_temp.external.relationship %> | 
+	<%= link_to "Take Test", edit_external_path(current_temp.external) %>
+	<% if current_temp.external.a1size != nil %>
+	 | <%= link_to "View", external_path(current_temp.external) %>
+	<% end %>
+	
 <% end %>
 <h1>Temps#show</h1>
 <p>Find me in app/views/temps/show.html.erb</p>
