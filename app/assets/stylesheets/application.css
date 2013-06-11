@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+*{
+	font-family: sans-serif;
+}
+
+#composite_internal{
+	color:red;
+	opacity:0.3;
+}
+
+#composite_external{
+	color:blue;
+	opacity:0.3;
+}

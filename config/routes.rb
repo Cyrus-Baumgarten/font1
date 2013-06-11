@@ -21,7 +21,19 @@ Rev1::Application.routes.draw do
   devise_for :users
   
   resources :temps
-  resources :sketches
+  
+  resources :sketches do
+    match '/composite'      => "analyze#composite",     via: :get
+    match '/internal'       => "analyze#internals",     via: :get
+    match '/external'       => "analyze#external",      via: :get
+    match '/superiors'      => "analyze#superiors",     via: :get 
+    match '/peers'          => "analyze#peers",         via: :get
+    match '/subordinates'   => "analyze#subordinates",  via: :get
+    match '/data1'          => "analyze#data1",         via: :get
+    match '/data2'          => "analyze#data2",         via: :get
+    match '/data3'          => "analyze#data3",         via: :get
+  end
+  
   resources :externals
   resources :internals
   
